@@ -1,0 +1,3 @@
+data row sample
+date        energy      	power	power1	power2	power3
+2018-09-19	116379038911	331025	24488	215011	91526

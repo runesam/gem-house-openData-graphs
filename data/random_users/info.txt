@@ -1,0 +1,3 @@
+data row sample
+date	                timestamp	    energy	        power	power1	power2	power3
+2017-11-01T00:00:01.604	1509494401604	17522361115000	477550	192650	35510	249390

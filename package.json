@@ -1,0 +1,12 @@
+{
+  "name": "databahn-charts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "runesam",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "moment": "^2.29.1"
+  }
+}
