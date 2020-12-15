@@ -29,24 +29,31 @@ When we execute the script, it will reach to each folder and scan the files insi
 
 in this repo we have the following data folders:
 * `daily_data_each_user_in_separate_csv` for user's daily consumption. a `csv` file per user.
-format sample:
 
-| date 		 | energy		| power  | power1| power2 | power3 |
-| :--------: | :----------: | :----: | :---: | :----: | :----: |
-| 2018-09-19 | 116379038911 | 331025 | 24488 | 215011 | 91526  |
+    `csv` format sample:
+
+    | date 		 | energy		| power  | power1| power2 | power3 |
+    | :--------: | :----------: | :----: | :---: | :----: | :----: |
+    | 2018-09-19 | 116379038911 | 331025 | 24488 | 215011 | 91526  |
+
 * `disaggregation-data` for user's appliances disaggrigation. this folders meant to be for single user.
- format sample:
 
-| id 	 | applianceType | startTime  | stopTime.  | usage | unit |
-| :----: | :-----------: | :--------: | :--------: | :---: | :--: |
-| 524288 | AlwaysOn		 | 1591488000 | 1591574400 | 5.861 | kWh  |
-so a single `csv` file is expected to be there.
+    `csv` format sample:
+
+    | id 	 | applianceType | startTime  | stopTime.  | usage | unit |
+    | :----: | :-----------: | :--------: | :--------: | :---: | :--: |
+    | 524288 | AlwaysOn		 | 1591488000 | 1591574400 | 5.861 | kWh  |
+
+    so a single `csv` file is expected to be there.
+
+
 * `random_users` for users' raw consumption data.
- format sample:
+ 
+    `csv` format sample:
 
-| date		 		 	  | timestamp     | energy         | power  | power1 | power2 | power3
-| :---------------------: | :-----------: | :------------: | :----: | :----: | :----: | :-----
-| 2017-11-01T00:00:01.604 | 1509494401604 | 17522361115000 | 477550 | 192650 | 35510  | 249390
+    | date		 		 	  | timestamp     | energy         | power  | power1 | power2 | power3
+    | :---------------------: | :-----------: | :------------: | :----: | :----: | :----: | :-----
+    | 2017-11-01T00:00:01.604 | 1509494401604 | 17522361115000 | 477550 | 192650 | 35510  | 249390
 
 ### Charts Folder
 The `charts` folder is where the web based charts lives. It include 5 folders each folder includes the needed assets for the chart to be generated.
