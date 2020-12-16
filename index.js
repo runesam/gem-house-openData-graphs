@@ -77,7 +77,6 @@ function generateHourConsumption() {
             if (!beforeTime) {
                 beforeTime = moment(data.date).set({ hours: 11 });
                 afterTime = moment(data.date).set({ hours: 12 });
-                console.log(beforeTime, afterTime);
             }
     
             if (time.isBetween(beforeTime, afterTime)) {
@@ -103,7 +102,6 @@ function generateHourConsumption() {
     }
 
     files.forEach(file => {
-        console.log(file);
         readStream = fs.createReadStream(`./data/random_users/${file}`);
         readStream.pipe(getStream(file));
     });
@@ -124,7 +122,6 @@ function generateDayConsumption() {
             if (!beforeTime) {
                 beforeTime = moment(data.date).startOf('day');
                 afterTime = moment(data.date).endOf('day');
-                console.log(beforeTime, afterTime);
             }
     
             if (time.isBetween(beforeTime, afterTime) && (!userHourData.data.length || time.diff(userHourData.data[userHourData.data.length - 1].time, 'minutes') > 2)) {
@@ -150,7 +147,6 @@ function generateDayConsumption() {
     }
 
     files.forEach(file => {
-        console.log(file);
         readStream = fs.createReadStream(`./data/random_users/${file}`);
         readStream.pipe(getStream(file));
     });
@@ -171,7 +167,6 @@ function generateWeekConsumption() {
             if (!beforeTime) {
                 beforeTime = moment(data.date);
                 afterTime = moment(data.date).add(7, 'day');
-                console.log(beforeTime, afterTime);
             }
     
             if (time.isBetween(beforeTime, afterTime) && (!userHourData.data.length || time.diff(userHourData.data[userHourData.data.length - 1].time, 'minutes') > 14)) {
@@ -197,7 +192,6 @@ function generateWeekConsumption() {
     }
 
     files.forEach(file => {
-        console.log(file);
         readStream = fs.createReadStream(`./data/random_users/${file}`);
         readStream.pipe(getStream(file));
     });
@@ -269,7 +263,6 @@ function generateAverageAppliancesConsumption() {
             }, {})
             writeStream.write(`var result = ${JSON.stringify(sorted)};`);
         } catch (e) {
-            console.log(e);
             setTimeout(mapAverageData);
         }
     }
